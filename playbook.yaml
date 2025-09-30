@@ -1,0 +1,5 @@
+- name: "ping the server"
+  hosts: 3.91.38.145
+  tasks:
+   - name: "ping the server"
+     ansible.builtin.ping:
