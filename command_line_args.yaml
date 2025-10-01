@@ -1,0 +1,7 @@
+- name: "command line arguments"
+  hosts: local
+  connection: local
+  tasks:
+   - name: "username details"
+     ansible.builtin.debug:
+      msg: "username is {{username}}"
