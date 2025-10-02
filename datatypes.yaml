@@ -2,7 +2,7 @@
     hosts: local
     connection: local
     vars:
-     sname: "nginx"
+     sname: "smily"
      sport: 8080
      senabled: true
      packages: ["nginx", "mysql"]
