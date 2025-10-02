@@ -10,7 +10,8 @@
      - name: "changing the data types"
        ansible.builtin.set_fact:
          s_name: "{{ sname | int }}"
+         s_port: "{{ sport | string}}"
      - name: "printing datatypes"
        ansible.builtin.debug:
-         msg: " {{ sname }} type is {{ s_name | type_debug }} , {{ sport }} type is {{ sport | type_debug }} ,  {{ senabled }} type is {{ senabled | type_debug }}, {{ packages }} type is {{ packages | type_debug }}"
+         msg: " {{ sname }} type is {{ s_name | type_debug }} , {{ sport }} type is {{ s_port | type_debug }} ,  {{ senabled }} type is {{ senabled | type_debug }}, {{ packages }} type is {{ packages | type_debug }}"
        
