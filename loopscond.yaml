@@ -1,0 +1,17 @@
+  - name:
+    hosts: local
+    connection: local
+    become: yes
+    vars:
+      packages:
+       - nginx
+       - mysql
+       - mongodb
+    tasks:
+      - name: "installing  mongo db package"
+        ansible.builtin.package:
+         name: "{{item}}"
+         state: present
+        loop: "{{packages}}"
+        when: item == mongodb
+         
