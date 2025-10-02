@@ -10,8 +10,11 @@
      - name: "printing datatypes"
        ansible.builtin.debug:
          msg: " {{ name }} type is {{ name | type_debug }}"
+       ansible.builtin.debug:
          msg: " {{ port }} type is {{ port | type_debug }}"
+       ansible.builtin.debug:
          msg: " {{ enabled }} type is {{ enabled | type_debug }}"
+       ansible.builtin.debug:
          msg: " {{ packages }} type is {{ packages | type_debug }}"
 
 
