@@ -2,20 +2,15 @@
     hosts: local
     connection: local
     vars:
-     name: "nginx"
-     port: 8080
-     enabled: true
+     sname: "nginx"
+     sport: 8080
+     senabled: true
      packages: ["nginx", "mysql"]
     tasks:
      - name: "printing datatypes"
        ansible.builtin.debug:
-         msg: " {{ name }} type is {{ name | type_debug }}"
-       ansible.builtin.debug:
-         msg: " {{ port }} type is {{ port | type_debug }}"
-       ansible.builtin.debug:
-         msg: " {{ enabled }} type is {{ enabled | type_debug }}"
-       ansible.builtin.debug:
-         msg: " {{ packages }} type is {{ packages | type_debug }}"
+         msg: " {{ sname }} type is {{ sname | type_debug }} , {{ sport }} type is {{ sport | type_debug }} ,  {{ senabled }} type is {{ senabled | type_debug }}, {{ packages }} type is {{ packages | type_debug }}"
+       
 
 
       
