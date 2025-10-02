@@ -17,4 +17,4 @@
     - name: "checking syllabus"
       ansible.builtin.debug:
         msg: "syllabus is gud"
-      when: SHELLSCRIPT in SYLLABUS
+      when: "'SHELLSCRIPT' in SYLLABUS"
