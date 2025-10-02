@@ -13,7 +13,7 @@
     - name: "checking the duration"
       ansible.builtin.debug:
        msg: "course duration is as expected"
-      when: DURATION > 100
+      when: DURATION == 100
     - name: "checking syllabus"
       ansible.builtin.debug:
         msg: "syllabus is gud"
