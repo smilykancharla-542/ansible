@@ -1,0 +1,9 @@
+  - name: "checking python version"
+    hosts: local
+    connection: local
+    gather_facts: yes
+    tasks:
+    - debug:
+        msg: "Python version is {{ ansible_facts['python_version'] }}"
+    - debug:
+        msg: "Python executable is {{ ansible_facts['python']['executable'] }}"
