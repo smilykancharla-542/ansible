@@ -1,0 +1,12 @@
+ - name: "conditions exampples"
+   hosts: local
+   connection: local
+   vars:
+    COURSE: "DEVOPSECOPS"
+    DURATIONS: 100
+    SYLLABUS: ["SHELLSCRIPT","ANSIBLE","DOCKER"]
+   tasks:
+    - name : "checking the course name"
+      ansible.builtin.debug:
+       msg: "course name is matched"
+      when: COURSE == "DEVOPSECOPS"
