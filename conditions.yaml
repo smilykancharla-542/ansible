@@ -3,10 +3,18 @@
    connection: local
    vars:
     COURSE: "DEVOPSECOPS"
-    DURATIONS: 100
+    DURATION: 100
     SYLLABUS: ["SHELLSCRIPT","ANSIBLE","DOCKER"]
    tasks:
-    - name : "checking the course name"
+    - name: "checking the course name"
       ansible.builtin.debug:
        msg: "course name is matched"
       when: COURSE == "DEVOPSECOPS"
+    - name: "checking the duration"
+      ansible.builtin.debug:
+       msg: "course duration is as expected"
+      when: DURATION > 100
+    - name: "checking syllabus"
+      ansible.builtin.debug:
+        msg: "syllabus is gud"
+      when: SHELLSCRIPT in SYLLABUS
