@@ -8,7 +8,7 @@
      packages: ["nginx", "mysql"]
     tasks:
      - name: "changing the data types"
-       ansible.builtin.debug:
+       ansible.builtin.set_fact:
          s_name: "{{ sname | int }}"
      - name: "printing datatypes"
        ansible.builtin.debug:
