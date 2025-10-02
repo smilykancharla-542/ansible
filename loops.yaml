@@ -6,6 +6,6 @@
         ansible.builtin.package:
          name: "{{item}}"
          state: present
-        loops:
+        loop:
          - nginx
          - mysql
