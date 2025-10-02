@@ -1,0 +1,15 @@
+  - name: "checking datatypes"
+    hosts: local
+    connection: local
+    vars:
+     sname: "smily"
+     sport: 8080
+     senabled: true
+     packages: ["nginx", "mysql"]
+    tasks:
+     - name: "changing the data types"
+       s_name: "{{ sname | int }}"
+     - name: "printing datatypes"
+       ansible.builtin.debug:
+         msg: " {{ sname }} type is {{ s_name | type_debug }} , {{ sport }} type is {{ sport | type_debug }} ,  {{ senabled }} type is {{ senabled | type_debug }}, {{ packages }} type is {{ packages | type_debug }}"
+       
