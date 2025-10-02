@@ -27,4 +27,4 @@
       ansible.builtin.debug:
        msg: "course duration is as expected"
       when: DURATION == 100 or COURSE == "fullstack"
-    - name: "checking syllabus"
+    
