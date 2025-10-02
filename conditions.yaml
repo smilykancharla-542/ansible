@@ -21,5 +21,10 @@
       when: "'SHELLSCRIPT' in SYLLABUS"
     - name: "checking debug mode"
       ansible.builtin.debug:
-        msg: "debug_mode is made as false"
+        msg: "run if debug mode set as true"
       when: debug_mode | bool
+    - name: "checking the duration"
+      ansible.builtin.debug:
+       msg: "course duration is as expected"
+      when: DURATION == 100 or COURSE == "fullstack"
+    - name: "checking syllabus"
