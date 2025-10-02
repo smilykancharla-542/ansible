@@ -19,4 +19,4 @@
       ansible.builtin.debug:
         msg: "syllabus is gud"
       when: "'SHELLSCRIPT' in SYLLABUS"
-    - name: "checking debug mode"
+   
