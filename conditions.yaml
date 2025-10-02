@@ -5,6 +5,7 @@
     COURSE: "DEVOPSECOPS"
     DURATION: 100
     SYLLABUS: ["SHELLSCRIPT","ANSIBLE","DOCKER"]
+    debug_mode: false
    tasks:
     - name: "checking the course name"
       ansible.builtin.debug:
@@ -18,3 +19,7 @@
       ansible.builtin.debug:
         msg: "syllabus is gud"
       when: "'SHELLSCRIPT' in SYLLABUS"
+    - name: "checking debug mode"
+      ansible.builtin.debug:
+        msg: "debug_mode is made as false"
+      when: debug_mode | bool
