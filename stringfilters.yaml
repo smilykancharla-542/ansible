@@ -2,7 +2,7 @@
    hosts: local
    connection: local
    vars:
-    name: "smily kancharla is good girl"
+    name: "Smily KANCHARLA is good girl"
    tasks:
      - name: "lower case"
        ansible.builtin.debug:
