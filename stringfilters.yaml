@@ -12,7 +12,7 @@
          msg: "{{name | upper}}"
      - name: "replace"
        ansible.builtin.debug:
-         msg: "{{name | replce('good','bad')}}"
+         msg: "{{name | replace('good','bad')}}"
      - name: "capitalize"
        ansible.builtin.debug:
          msg: "{{name | capitalize}}"
