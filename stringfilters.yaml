@@ -16,6 +16,6 @@
      - name: "capitalize"
        ansible.builtin.debug:
          msg: "{{name | capitalize}}"
-     - name: "tittle"
+     - name: "title"
        ansible.builtin.debug:
-         msg: "{{name | tittle}}"
+         msg: "{{name | title}}"
