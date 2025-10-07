@@ -7,3 +7,15 @@
      - name: "lower case"
        ansible.builtin.debug:
          msg: "{{name | lower}}"
+     - name: "upper case"
+       ansible.builtin.debug:
+         msg: "{{name | upper}}"
+     - name: "replace"
+       ansible.builtin.debug:
+         msg: "{{name | replce('good','bad')}}"
+     - name: "capitalize"
+       ansible.builtin.debug:
+         msg: "{{name | capitalize}}"
+     - name: "tittle"
+       ansible.builtin.debug:
+         msg: "{{name | tittle}}"
