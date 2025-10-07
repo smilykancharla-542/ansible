@@ -1,0 +1,9 @@
+ - name: "string filters examples"
+   hosts: local
+   connection: local
+   vars:
+    name: "smily kancharla is good girl"
+   tasks:
+     - name: "lower case"
+       ansible.builtin.debug:
+         msg: "{{name | lower}}"
